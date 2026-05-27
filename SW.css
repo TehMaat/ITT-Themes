@@ -1,0 +1,688 @@
+/* ============================================
+   ⭐ STAR WARS THEME - A Long Time Ago...
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+    /* Colori base Star Wars */
+    --sw-space-black: #0a0a0f;
+    --sw-deep-space: #0d1117;
+    --sw-imperial-dark: #111827;
+    --sw-imperial-mid: #1a2332;
+    --sw-imperial-light: #243044;
+    --sw-saber-blue: #4fc3f7;
+    --sw-saber-red: #ef5350;
+    --sw-saber-green: #66bb6a;
+    --sw-saber-purple: #ab47bc;
+    --sw-crawl-yellow: #f5c518;
+    --sw-force-gold: #ffd54f;
+    --sw-rebel-orange: #ff8a65;
+    --sw-hologram-blue: rgba(79, 195, 247, 0.15);
+    --sw-hologram-border: rgba(79, 195, 247, 0.3);
+    --sw-text-light: #e0e0e0;
+    --sw-text-dim: #8899aa;
+
+    --message-bubble-bg: var(--sw-imperial-mid);
+
+    --achievement-fg: inherit;
+    --achievement-bg: var(--sw-deep-space);
+
+    --alert-bg: var(--sw-imperial-dark);
+    --alert-fg: var(--sw-text-dim);
+
+    --article-card-bg: var(--sw-deep-space);
+    --article-card-fg: var(--sw-text-dim);
+    --article-card-head-fg: var(--sw-text-dim);
+    --article-card-time-fg: var(--sw-text-dim);
+
+    --bbcode-input-header-bg: var(--sw-imperial-dark);
+    --bbcode-input-bg: var(--sw-imperial-dark);
+    --bbcode-input-body-bg: var(--sw-imperial-mid);
+    --bbcode-input-border: 1px solid var(--sw-hologram-border);
+    --bbcode-input-border-radius: 3px;
+
+    --button-filled-bg: var(--sw-imperial-light);
+    --button-filled-border: 1px solid var(--sw-hologram-border);
+    --button-filled-border-radius: 3px;
+    --button-filled-fg: var(--sw-saber-blue);
+
+    --button-outlined-bg: inherit;
+    --button-outlined-border: 1px solid var(--sw-hologram-border);
+    --button-outlined-border-radius: 3px;
+    --button-outlined-fg: currentColor;
+
+    --button-text-bg: inherit;
+    --button-text-border: none;
+    --button-text-border-radius: 3px;
+    --button-text-fg: currentColor;
+
+    --chatbox-message-bg: var(--sw-imperial-dark);
+
+    --comparison-divider-fg: var(--sw-saber-blue);
+    --comparison-button-fg: var(--sw-saber-blue);
+
+    --data-table-fg: inherit;
+    --data-table-th-bg: var(--sw-space-black);
+    --data-table-thead-border: 1px solid var(--sw-hologram-border);
+    --data-table-tr-border: .5px solid rgba(79, 195, 247, 0.1);
+    --data-table-tr-even-bg: var(--sw-imperial-mid);
+    --data-table-tr-hover-bg: var(--sw-hologram-blue);
+    --data-table-tr-odd-bg: var(--sw-imperial-dark);
+    --data-table-tfoot-border: 1px solid var(--sw-hologram-border);
+
+    --dialog-bg: var(--sw-deep-space);
+    --dialog-border: 1px solid var(--sw-hologram-border);
+    --dialog-border-radius: 5px;
+    --dialog-box-shadow: 0 0 20px rgba(79, 195, 247, 0.1);
+    --dialog-fg: inherit;
+    --dialog-head-bg: var(--sw-imperial-dark);
+    --dialog-head-fg: var(--sw-saber-blue);
+
+    --icon-button-bg: inherit;
+    --icon-button-border: none;
+    --icon-button-border-radius: 3px;
+    --icon-button-fg: currentColor;
+
+    --input-text-border: 1px solid var(--sw-hologram-border);
+    --input-text-border-active: 2px solid var(--sw-saber-blue);
+    --input-text-border-error: 1px solid var(--sw-saber-red);
+    --input-text-border-hover: 2px solid var(--sw-force-gold);
+    --input-text-border-radius: 3px;
+    --input-text-fg: var(--sw-text-dim);
+
+    --key-value-even-bg: var(--sw-imperial-dark) !important;
+    --key-value-fg: var(--sw-text-light);
+    --key-value-odd-bg: var(--sw-imperial-mid) !important;
+    --key-value-padding: 10px;
+
+    --label-bg: var(--sw-imperial-light);
+    --label-fg: var(--sw-text-dim);
+    --label-fg-active: var(--sw-saber-blue);
+    --label-fg-error: var(--sw-saber-red);
+    --label-fg-hover: var(--sw-force-gold);
+
+    --meter-fg: var(--sw-imperial-mid);
+    --meter-bg: var(--sw-imperial-light);
+
+    --notification-unread: var(--sw-imperial-light);
+    --notification-read: transparent;
+
+    --paginate-bg: var(--sw-space-black);
+    --paginate-bg-hover: var(--sw-hologram-blue);
+    --paginate-bg-current: var(--sw-imperial-mid);
+    --paginate-fg: var(--sw-text-light);
+    --paginate-fg-disabled: #444;
+    --paginate-divider: var(--sw-hologram-border);
+
+    --panel-action-fg: var(--sw-text-dim);
+    --panel-border: 1px solid var(--sw-hologram-border);
+    --panel-bg: var(--sw-imperial-mid);
+    --panel-fg: var(--sw-text-light);
+    --panel-box-shadow: 0 0 15px rgba(79, 195, 247, 0.05);
+    --panel-border-radius: 3px;
+    --panel-head-bg: var(--sw-imperial-dark);
+    --panel-head-fg: var(--sw-saber-blue);
+
+    --post-bg: var(--sw-imperial-dark);
+    --post-fg: var(--sw-text-light);
+    --post-shadow: 0 0 10px rgba(79, 195, 247, 0.05);
+    --post-head-fg: var(--sw-text-light);
+    --post-head-bg: none;
+    --post-toolbar-bg: var(--sw-imperial-light);
+    --post-toolbar-fg: var(--sw-text-dim);
+    --post-toolbar-hover-bg: var(--sw-hologram-blue);
+    --post-toolbar-hover-fg: var(--sw-saber-blue);
+    --post-like-fg: var(--sw-saber-green);
+    --post-dislike-fg: var(--sw-saber-red);
+    --post-aside-bg: var(--sw-imperial-light);
+    --post-aside-fg: var(--sw-text-light);
+    --post-footer-fg: var(--sw-text-light);
+
+    --select-border: 1px solid var(--sw-hologram-border);
+    --select-border-active: 2px solid var(--sw-saber-blue);
+    --select-border-error: 1px solid var(--sw-saber-red);
+    --select-border-hover: 2px solid var(--sw-force-gold);
+    --select-border-radius: 3px;
+    --select-fg: var(--sw-text-dim);
+
+    --subforum-listing-odd-bg: var(--sw-imperial-mid);
+    --subforum-listing-even-bg: var(--sw-imperial-dark);
+
+    --textarea-border: 1px solid var(--sw-hologram-border);
+    --textarea-border-active: 2px solid var(--sw-saber-blue);
+    --textarea-border-error: 1px solid var(--sw-saber-red);
+    --textarea-border-hover: 2px solid var(--sw-force-gold);
+    --textarea-border-radius: 3px;
+    --textarea-fg: var(--sw-text-dim);
+
+    --torrent-card-bg: var(--sw-imperial-dark);
+    --torrent-card-fg: inherit;
+    --torrent-card-border: 1px solid var(--sw-hologram-border);
+    --torrent-card-head-bg: var(--sw-space-black);
+    --torrent-card-head-fg: var(--sw-saber-blue);
+    --torrent-card-link-fg: var(--sw-saber-blue);
+    --torrent-card-genre-fg: var(--sw-force-gold);
+
+    --torrent-row-sticky-bg: var(--sw-imperial-dark);
+
+    --user-stat-card-bg: var(--sw-imperial-dark);
+}
+
+/* ============================================
+   BODY - Campo stellare
+   ============================================ */
+body {
+    /* SOSTITUISCI con la tua immagine di stelle/galassia */
+    background: var(--sw-space-black)
+        url('https://blutopia.cc/img/blutopian_bg.svg');
+    background-size: 300px auto;
+    background-color: var(--sw-space-black);
+    color: var(--sw-text-light);
+}
+
+/* ============================================
+   NAVIGAZIONE
+   ============================================ */
+.top-nav {
+    background-color: rgba(10, 10, 15, 0.95);
+    border-bottom: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 2px 20px rgba(79, 195, 247, 0.1);
+}
+
+.ratio-bar {
+    background-color: var(--sw-imperial-mid);
+    border-bottom: 1px solid var(--sw-hologram-border);
+}
+
+.ratio-bar .badge-user {
+    background: var(--sw-imperial-dark);
+    border: 1px solid var(--sw-hologram-border);
+}
+
+.breadcrumb {
+    background-color: rgba(10, 10, 15, 0.75) !important;
+    border: 1px solid rgba(79, 195, 247, 0.15);
+    border-radius: 3px;
+}
+
+/* ============================================
+   CONTENITORE PRINCIPALE
+   ============================================ */
+.col-md-10 {
+    background-color: var(--sw-imperial-mid);
+    margin-top: 15px;
+    padding-top: 10px;
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 0 30px rgba(79, 195, 247, 0.05) !important;
+}
+
+/* ============================================
+   PANNELLI & BLOCCHI
+   ============================================ */
+.panel-chat > .panel-heading {
+    background-color: var(--sw-imperial-dark);
+    border-bottom: 1px solid var(--sw-hologram-border);
+}
+
+.container > .block, .container > .well, .container > .box {
+    background: var(--sw-imperial-mid);
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.05) !important;
+}
+
+.block, .well {
+    background: var(--sw-imperial-mid) !important;
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.05) !important;
+}
+
+.container.box, .torrent-desc {
+    background: var(--sw-imperial-mid);
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.05) !important;
+}
+
+.container.box {
+    background: var(--sw-imperial-mid);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.05) !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+#l-footer {
+    background: var(--sw-imperial-mid) !important;
+    border-top: 1px solid var(--sw-hologram-border);
+    opacity: .9;
+    min-height: 350px;
+}
+
+.profile-footer {
+    background-color: var(--sw-imperial-light);
+}
+
+/* ============================================
+   ALERTS
+   ============================================ */
+.alert-info {
+    background-color: rgba(79, 195, 247, 0.1);
+    border-color: var(--sw-hologram-border);
+    border-left: 4px solid var(--sw-saber-blue);
+    color: var(--sw-saber-blue);
+}
+
+.alert-danger, .btn-danger, .panel-danger, .panel-danger > .panel-heading {
+    background-color: rgba(239, 83, 80, 0.2);
+    border-color: rgba(239, 83, 80, 0.3);
+    border-left: 4px solid var(--sw-saber-red);
+}
+
+.alert-success, .btn-success, .panel-success, .panel-success > .panel-heading {
+    background-color: rgba(102, 187, 106, 0.2);
+    border-color: rgba(102, 187, 106, 0.3);
+    border-left: 4px solid var(--sw-saber-green);
+}
+
+.alert-primary, .btn-primary, .panel-primary, .panel-primary > .panel-heading {
+    background-color: rgba(79, 195, 247, 0.3);
+    border-color: var(--sw-hologram-border);
+}
+
+/* ============================================
+   NOTIFICHE
+   ============================================ */
+.notify .point {
+    background-color: var(--sw-saber-blue);
+    box-shadow: 0 0 8px var(--sw-saber-blue);
+}
+
+.notify .heartbit {
+    border: 4px solid var(--sw-saber-blue);
+}
+
+/* ============================================
+   POST & FORUM
+   ============================================ */
+.post-signature {
+    background-color: var(--sw-imperial-mid);
+    border-top: 1px solid var(--sw-hologram-border);
+}
+
+.topic-info {
+    color: var(--sw-saber-blue);
+}
+
+.profil {
+    background: var(--sw-imperial-mid);
+    border: 1px solid var(--sw-hologram-border);
+}
+
+.topic .topic-posts .post article.post-content blockquote {
+    background-color: rgba(79, 195, 247, 0.05);
+    border-left: 4px solid var(--sw-saber-blue);
+    box-shadow: inset 0 0 20px rgba(79, 195, 247, 0.03);
+}
+
+.decoda-code, .decoda-quote {
+    border: 1px solid var(--sw-hologram-border);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: var(--sw-saber-blue);
+    text-shadow: 0 0 10px rgba(79, 195, 247, 0.2);
+}
+
+hr {
+    border-top: 1px solid var(--sw-hologram-border);
+}
+
+.lead, blockquote {
+    color: var(--sw-text-light);
+}
+
+/* ============================================
+   COLORI TESTO
+   ============================================ */
+.text-red {
+    color: var(--sw-saber-red);
+    text-shadow: 0 0 5px rgba(239, 83, 80, 0.3);
+}
+
+.text-green {
+    color: var(--sw-saber-green);
+    text-shadow: 0 0 5px rgba(102, 187, 106, 0.3);
+}
+
+.text-orange {
+    color: var(--sw-rebel-orange);
+}
+
+.text-purple {
+    color: var(--sw-saber-purple);
+    text-shadow: 0 0 5px rgba(171, 71, 188, 0.3);
+}
+
+.text-info {
+    color: var(--sw-saber-blue);
+}
+
+.text-danger {
+    color: var(--sw-saber-red);
+}
+
+.text-success {
+    color: var(--sw-saber-green);
+}
+
+.text-pink {
+    color: rgba(255, 124, 209, 0.82);
+}
+
+/* ============================================
+   LINK
+   ============================================ */
+a {
+    color: var(--sw-saber-blue);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--sw-force-gold);
+    text-shadow: 0 0 8px rgba(79, 195, 247, 0.3);
+}
+
+/* ============================================
+   BADGE
+   ============================================ */
+.badge-extra {
+    border: 1px solid var(--sw-hologram-border);
+    border-radius: 2px;
+    background: rgba(79, 195, 247, 0.05);
+}
+
+.badge-extra.text-red {
+    color: var(--sw-saber-red);
+}
+
+.badge-user {
+    border-radius: 2px;
+    border: 1px solid var(--sw-hologram-border);
+}
+
+/* ============================================
+   TORRENT
+   ============================================ */
+i.torrent-icon {
+    color: var(--sw-saber-blue);
+    text-shadow: 0 0 8px rgba(79, 195, 247, 0.4);
+}
+
+a.view-torrent, a.view-torrent:hover {
+    font-size: 17px;
+}
+
+/* ============================================
+   STATISTICHE & PROGRESS
+   ============================================ */
+div.stats {
+    background-color: rgba(10, 10, 15, 0.6);
+    border: 1px solid var(--sw-hologram-border);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--sw-saber-blue), #29b6f6);
+    border-bottom: none;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.3);
+}
+
+/* ============================================
+   MEDIA & MISC
+   ============================================ */
+.media {
+    border-left-color: var(--sw-saber-blue);
+}
+
+select option {
+    background-color: var(--sw-imperial-mid);
+}
+
+.jumbotron {
+    border: 1px solid var(--sw-hologram-border);
+    background-color: rgba(79, 195, 247, 0.05);
+    box-shadow: 0 0 30px rgba(79, 195, 247, 0.1);
+}
+
+ul.nav.nav-tabs.mb-5 {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0;
+}
+
+/* ============================================
+   ⭐ SITE LOGO - Stile Star Wars Opening Crawl
+   ============================================ */
+.site-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: auto;
+    margin: 0 auto -1.4rem;
+}
+
+.site-logo__link::after {
+    font-family: Orbitron, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    content: "BLUTOPIA";
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin: 0 auto;
+    /* Effetto giallo Star Wars crawl */
+    background-color: var(--sw-crawl-yellow);
+    background-image: linear-gradient(
+        180deg,
+        #ffd54f 0%,
+        #f5c518 40%,
+        #c9a400 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(110%);
+    text-shadow: none;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.site-logo__link:hover:after {
+    filter: brightness(130%);
+    letter-spacing: 12px;
+}
+
+.site-logo__link {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.site-logo,
+.site-logo__link,
+.site-logo__link:after {
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+/* ============================================
+   🚀 MAIN MENU - Stile pannello di controllo imperiale
+   ============================================ */
+.main-menu {
+    background-color: rgba(10, 10, 15, 0.9);
+    height: auto;
+    margin: 5px auto 10px auto;
+    font-size: 10pt;
+    text-align: left;
+    z-index: 7;
+    border-radius: 3px;
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow:
+        0 0 15px rgba(79, 195, 247, 0.1),
+        inset 0 1px 0 rgba(79, 195, 247, 0.1);
+}
+
+.main-menu__list {
+    padding: 5px 0 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 1px;
+}
+
+.main-menu__item {
+    display: inline;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.main-menu__link {
+    padding: 0.5em;
+    color: var(--sw-text-dim);
+    position: relative;
+    font-family: Orbitron, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* Effetto lightsaber sotto i link */
+.main-menu__link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--sw-saber-blue);
+    box-shadow: 0 0 8px var(--sw-saber-blue), 0 0 15px var(--sw-saber-blue);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.main-menu__link:hover:before {
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+.main-menu__link:hover {
+    color: var(--sw-saber-blue);
+    text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .main-menu  {
+        -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+        background-color: rgba(10, 10, 15, 0.7) !important;
+    }
+}
+
+/* ============================================
+   DROPDOWN
+   ============================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 10, 15, 0.95);
+    min-width: 100px;
+    border: 1px solid var(--sw-hologram-border);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(79, 195, 247, 0.1);
+    margin-top: 8px;
+    left: 0;
+    top: 16px;
+}
+
+.dropdown-content a {
+    color: var(--sw-text-dim);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    color: var(--sw-saber-blue);
+    background-color: var(--sw-hologram-blue);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ============================================
+   NAVIGAZIONE SECONDARIA
+   ============================================ */
+.secondary-nav {
+    background-color: var(--sw-imperial-light);
+    border-bottom: 1px solid var(--sw-hologram-border);
+}
+
+.quick-search__inputs {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--sw-hologram-border);
+    border-radius: 3px;
+}
+
+/* ============================================
+   ✨ EFFETTI EXTRA - Hologramma & Glow
+   ============================================ */
+
+/* Effetto glow sui pannelli al hover */
+.block:hover, .well:hover, .container.box:hover {
+    border-color: rgba(79, 195, 247, 0.4);
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+/* Scrollbar personalizzata */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sw-space-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sw-imperial-light);
+    border: 1px solid var(--sw-hologram-border);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sw-saber-blue);
+    box-shadow: 0 0 8px var(--sw-saber-blue);
+}
+
+/* Selezione testo in tema */
+::selection {
+    background: rgba(79, 195, 247, 0.3);
+    color: #fff;
+}
